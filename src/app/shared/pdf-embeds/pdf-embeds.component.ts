@@ -10,9 +10,9 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   styleUrl: './pdf-embeds.component.css'
 })
 export class PdfEmbedsComponent {
+  
   @Input() PDF_URL: string = "";
   safePdfUrl: SafeResourceUrl | null = null;
-
   constructor(private sanitizer: DomSanitizer) {}
 
   ngOnChanges() {
