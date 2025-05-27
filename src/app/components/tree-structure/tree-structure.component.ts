@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './tree-structure.component.css'
 })
 export class TreeStructureComponent {
+  //the imports for the different tree structures
+
+
+
 
 }
