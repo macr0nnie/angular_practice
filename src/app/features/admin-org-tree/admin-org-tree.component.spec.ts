@@ -1,17 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { CustomTreeComponent } from './custom-tree.component';
 
-describe('CustomTreeComponent', () => {
-  let component: CustomTreeComponent;
-  let fixture: ComponentFixture<CustomTreeComponent>;
+import { AdminOrgTreeComponent } from './admin-org-tree.component';
+
+describe('AdminOrgTreeComponent', () => {
+  let component: AdminOrgTreeComponent;
+  let fixture: ComponentFixture<AdminOrgTreeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CustomTreeComponent]
+      imports: [AdminOrgTreeComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(CustomTreeComponent);
+    fixture = TestBed.createComponent(AdminOrgTreeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

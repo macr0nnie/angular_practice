@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PdfEmbedsComponent } from './pdf-embeds.component';
 
 describe('PdfEmbedsComponent', () => {
@@ -11,7 +10,6 @@ describe('PdfEmbedsComponent', () => {
       imports: [PdfEmbedsComponent]
     })
     .compileComponents();
-
     fixture = TestBed.createComponent(PdfEmbedsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

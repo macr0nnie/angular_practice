@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TreeStructureComponent } from './tree-structure.component';
 
 describe('TreeStructureComponent', () => {

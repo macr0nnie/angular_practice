@@ -1,10 +1,6 @@
 <ul class="org-chart">
   <li *ngFor="let node of data">
-    <div
-      class="node"
-      [class.highlight]="selectedNode === node"
-      (click)="setSelected(node); $event.stopPropagation()"
-    >
+    <div class="node">
       <div class="node-title">{{ node.title }}</div>
       <div class="node-name">{{ node.name }}</div>
     </div>

@@ -19,7 +19,6 @@ export class PdfEmbedsComponent implements OnInit{
       ? this.sanitizer.bypassSecurityTrustResourceUrl(this.PDF_URL)
       : null;
   }
-  //ask
   ngOnInit(): void {
     //open the window with the pdf download link
     if (this.PDF_URL) {
