@@ -1,28 +1,40 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-export interface OrgNode {
+
+export interface TreeNode {
   name: string;
-  children?: OrgNode[];
+  title: string;
+  children?: TreeNode[];
 }
 
 @Component({
   selector: 'app-custom-tree',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './custom-tree.component.html',
-  styleUrl: './custom-tree.component.css'
+  styleUrl: './custom-tree.component.css',
 })
 export class CustomTreeComponent {
-  @Input() data: OrgNode[] = [];
-  @Input() level: number = 0;
-  @Input() isLast: boolean = false;
-  @Input() isFirst: boolean = false;
-  @Input() isRoot: boolean = false;
-  @Input() isChild: boolean = false;
-  @Input() isParent: boolean = false;
-  @Input() isLeaf: boolean = false;
-  @Input() isExpanded: boolean = false;
-  @Input() isCollapsed: boolean = false;
-  @Input() isSelected: boolean = false;
+  @Input() data: TreeNode[] = [];
+  //render data
+  renderData(node: TreeNode): string {
+    return `${node.name} - ${node.title}`;
+  }
+  
+  selectedNode?: TreeNode;
 
+setSelected(node: TreeNode) {
+  this.selectedNode = node;
+}
+  //highlight node
+
+  //search 
+
+  //admin controlls
+  //delete node
+  //add node
+  //edit node
+
+  
 
 
 }

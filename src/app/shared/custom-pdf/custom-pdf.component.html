@@ -1,3 +1,8 @@
 <div class="pdf-container">
   <embed [src]="pdfUrl" type="application/pdf" width="100%" height="600px" />
 </div>
+
+<button (click)="downloadPdf()" class="download-button">
+  Download PDF
+</button>
+<!-- Compare this snippet from angular_practice/src/app/components/pdf-embeds/pdf-embeds.component.ts: -->

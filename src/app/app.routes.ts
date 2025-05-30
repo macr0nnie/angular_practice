@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 import { PdfListComponent } from './components/pdf-list/pdf-list.component';
 
 export const routes: Routes = [
-  { path: 'pfd', component: PdfListComponent },
+  { path: 'pdf', component: PdfListComponent },
   { path: 'menu', component: MenuComponent },
   { path: 'tree', component: TreeStructureComponent },
 ];

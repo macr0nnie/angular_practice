@@ -8,5 +8,14 @@ import { Component,Input } from '@angular/core';
 })
 export class CustomPdfComponent {
   @Input() pdfUrl: string ='';
+  
+  downloadPdf() {
+    const link = document.createElement('a');
+    link.href = this.pdfUrl;
+    link.download = this.pdfUrl.split('/').pop() || 'download.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  }
 
 }
