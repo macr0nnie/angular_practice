@@ -23,7 +23,7 @@ export class PdfEmbedsComponent implements OnInit{
   ngOnInit(): void {
     //open the window with the pdf download link
     if (this.PDF_URL) {
-      window.open(this.PDF_URL, '_blank');
+      //window.open(this.PDF_URL, '_blank');
   }
 }
 }
