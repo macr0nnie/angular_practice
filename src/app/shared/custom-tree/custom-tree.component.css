@@ -1,0 +1,89 @@
+.org-chart {
+  font-family: Arial, sans-serif;
+  padding-top: 20px;
+}
+
+.org-chart ul {
+  padding-top: 20px;
+  position: relative;
+  transition: all 0.5s;
+}
+
+.org-chart li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding: 20px 5px 0 5px;
+  transition: all 0.5s;
+}
+
+/* Draw lines */
+.org-chart li::before, .org-chart li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  height: 20px;
+}
+.org-chart li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #ccc;
+}
+.org-chart li:only-child::after, .org-chart li:only-child::before {
+  display: none;
+}
+.org-chart li:only-child {
+  padding-top: 0;
+}
+.org-chart li:first-child::before, .org-chart li:last-child::after {
+  border: 0 none;
+}
+.org-chart li:last-child::before {
+  border-right: 1px solid #ccc;
+  border-radius: 0 5px 0 0;
+}
+.org-chart li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+.node {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block;
+  background: white;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  min-width: 120px;
+}
+.node-title {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 2px;
+}
+.node-name {
+  color: #555;
+  font-size: 0.95em;
+}
+.org-chart ul ul::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  width: 0;
+  height: 20px;
+}
+
+.highlight{
+  background-color: lightblue;
+}
+
+/* testing purposes */
+.node.highlight {
+  background: #ffe082;
+  border-color: #ffb300;
+  box-shadow: 0 0 8px #ffb300;
+}

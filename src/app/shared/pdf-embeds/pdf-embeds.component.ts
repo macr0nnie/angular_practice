@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
@@ -7,11 +7,10 @@ import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './pdf-embeds.component.html',
-  styleUrl: './pdf-embeds.component.css'
+  styleUrl: './pdf-embeds.component.css',
 })
-export class PdfEmbedsComponent {
-  
-  @Input() PDF_URL: string = "";
+export class PdfEmbedsComponent implements OnInit{
+  @Input() PDF_URL: string = '';
   safePdfUrl: SafeResourceUrl | null = null;
   constructor(private sanitizer: DomSanitizer) {}
 
@@ -20,4 +19,11 @@ export class PdfEmbedsComponent {
       ? this.sanitizer.bypassSecurityTrustResourceUrl(this.PDF_URL)
       : null;
   }
+  //ask
+  ngOnInit(): void {
+    //open the window with the pdf download link
+    if (this.PDF_URL) {
+      window.open(this.PDF_URL, '_blank');
+  }
+}
 }
