@@ -1,17 +1,15 @@
 <ul class="org-chart">
-  <ng-container *ngFor="let node of data">
-    <li>
-      <div
-        class="node"
-        [class.highlight]="selectedNode === node"
-        (click)="setSelected(node); $event.stopPropagation()"
-      >
-        <div class="node-title">{{ node.title }}</div>
-        <div class="node-name">{{ node.name }}</div>
-      </div>
-      <ng-container *ngIf="node.children && node.children.length">
-        <app-custom-tree [data]="node.children"></app-custom-tree>
-      </ng-container>
-    </li>
-  </ng-container>
+  <li *ngFor="let node of data">
+    <div
+      class="node"
+      [class.highlight]="selectedNode === node"
+      (click)="setSelected(node); $event.stopPropagation()"
+    >
+      <div class="node-title">{{ node.title }}</div>
+      <div class="node-name">{{ node.name }}</div>
+    </div>
+    <ng-container *ngIf="node.children && node.children.length">
+      <app-custom-tree [data]="node.children"></app-custom-tree>
+    </ng-container>
+  </li>
 </ul>
