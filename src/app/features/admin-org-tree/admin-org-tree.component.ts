@@ -13,4 +13,10 @@ import { FormsModule } from '@angular/forms';
 })
 export class AdminOrgTreeComponent {
 
+  //delete a nod
+  //add a node
+  //edit a node
+  //update the csv
+  //search a tree based on the employee name
+
 }
